@@ -1,2 +1,27 @@
 <index:>
-  <p>Home</p>
+
+      <div class="jumbotron">
+        <h1>Portal</h1>
+        <p class="lead">Displays all the published data from Temple customers.</p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Participate now!</a></p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-6">
+
+          col 1
+
+          {{each _page.collection}}
+            {{this}}
+          {{/}}
+
+        </div>
+
+        <div class="col-lg-6">
+
+          col 2
+
+        </div>
+
+      </div>
