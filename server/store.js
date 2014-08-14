@@ -7,9 +7,13 @@ function store(derby) {
 
   derby.use(require('racer-bundle'));
 
-  var opts = {db: liveDbMongo(process.env.MONGO_URL + '?auto_reconnect', {safe: true})};
+  var redisClient = require('redis').createClient();
+  redisClient.select(process.env.REDIS_DB);
 
-  var store = derby.createStore(opts);
+  var store = derby.createStore({
+    db: liveDbMongo(process.env.MONGO_URL + '?auto_reconnect', {safe: true}),
+    redis: redisClient
+  });
 
   store.on('bundle', function(browserify) {
 
