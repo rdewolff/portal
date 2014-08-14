@@ -1,6 +1,6 @@
 {
   "NODE_ENV": "development",
-  "PORT": 3000,
+  "PORT": 3001,
   "MONGO_URL": "mongodb://localhost:27017/portal",
   "REDIS_DB": "10",
   "SESSION_SECRET": "2e0f26f1b56c24810941af072297aadbce19b6cb",
