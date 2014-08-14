@@ -1,0 +1,10 @@
+{
+  "generator-derby": {
+    "project": "portal",
+    "app": "portal",
+    "coffee": false,
+    "stylus": true,
+    "jade": true,
+    "md": false
+  }
+}
